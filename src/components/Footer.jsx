@@ -1,11 +1,13 @@
 const Footer= ()=>{
     
-    
+    const currentYear= new Date().getFullYear()
     
     return(
-        <>
-            <p>Copyrights all reserved by Mehedi Hasan</p>
-        </>
+        
+            <footer>
+                <p>Copyrights all reserved by Mehedi Hasan {currentYear}</p>
+            </footer>
+        
     )
 }
 export default Footer
