@@ -1,6 +1,9 @@
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Note from "./components/Note"
+import notes from "./components/notes"
+
+
 
 
 const App=()=>{
@@ -8,7 +11,15 @@ const App=()=>{
         <>
             
             <Header />
-            <Note/>
+            {notes.map((eachNote)=>{
+                return(
+                    <Note
+                        key= {eachNote.key}
+                        title= {eachNote.title}
+                        content= {eachNote.content}
+                    />
+                )
+            })}
             <Footer/>
         </>
     )
